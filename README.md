@@ -4,14 +4,14 @@ DLX or dancing links (exact cover structure)
 C++ with QT
 
 (STILL SLOVENIAN COMMENT'S - LATER FIX THAT. ANY QUESTION'S, JUST CONTACT ME)
-##How to use?
+## How to use?
 Put numbers in square's: 0 mean empty
 
-##What is sudoku?
+## What is sudoku?
 Is logic puzzle, usually 9x9 array. In one column, row and square is exactly one number.
 
 ![alt tag](http://elmo.sbs.arizona.edu/sandiway/sudoku/challenge2.gif)
-##Exact cover
+## Exact cover
 Exact cover describes the problem in the form of a matrix with 1 and 0 values (Boolean or a binary matrix). Each column must at least one number one.
 We want get the problem Sudoku Exact cover. Here we do not do anything other than Sudoku rules written in the form of a matrix. The connections between rows and columns uniquely describe the problem.
 Each column describes a specific rule. We have 4:
@@ -46,10 +46,10 @@ Node.Left.Right = Node;
 ```
 The structure is created by each node is indicated by a pointer to up, down, left and right node.  Header row is all linked. We also have a special node in the head, which is called the root and point to the entire structure. In our case, we find all ones and this nodes connected with another. 
 
-##Algorithm:
+## Algorithm:
 Algorithm is simple when we have structure. We need two actions: cover and uncover. Algorithm works on brute-force, and end when we don't have columns in structure. When this happend, we have solution. When we have columns, pick one column and find all rows from this column. We remove this row and all columns connected with this row. This we work recursive. If we don't find solution, we go back to previus version and pick another column. We cover and uncover in constant time. Algorithm is very fast.
 
-##Aplication and measurement:
+## Aplication and measurement:
 ```
 kind of sudoku / number of sudoku / time in MS
 
@@ -72,7 +72,7 @@ Expert / 1 / 11
 Qassim Hamza / 1 / 129
 ```
 
-##License
+## License
 https://www.ocf.berkeley.edu/~jchu/publicportal/sudoku/sudoku.paper.html#DancingLinks
 
 http://lanl.arxiv.org/pdf/cs/0011047
